@@ -7,6 +7,8 @@ __author__ = "Sandy Lee"
 __version__ = "0.1.0"
 __license__ = "MIT"
 
+import sys
+
 
 def fizzbuzz(number=0):
     if number % 3 == 0 and number % 5 == 0:
@@ -21,22 +23,24 @@ def fizzbuzz(number=0):
 
 def main():
     """ Main entry point of the app """
-    again = True
-    while again:
+    while True:
 
-        number = input('Enter an integer:')
+        while True:
+            number = input('Enter a number:')
+            if number.isnumeric():
+                break
+            else:
+                print("Invalid Input")
         fizzbuzz(int(number))
-        again = input('Again? y/n')
-        if again == 'y':
-            again = True
-        elif again == 'n':
-            again = False
-        else:
+        while True:
+            answer = input('Again? y/n')
+            if answer in ('y', 'n'):
+                break
+            print("Invalid input")
+        if answer == 'y':
             continue
-    """
-    put in a nested while clause here
-    """
-
+        else:
+            sys.exit("Goodbye")
 
 
 if __name__ == "__main__":
