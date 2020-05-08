@@ -1,6 +1,6 @@
 #edabit_code_puzzles
 
-##FizzBuzz Interview Question
+##FizzBuzz
 
 Create a function that takes a number as an argument and returns "Fizz", "Buzz" or "FizzBuzz".
 
@@ -37,4 +37,24 @@ On generating a Fibonacci number where input is the two preceding values startin
 
 Notes:
 This function will take no parameters.
+---
+
+#Check If Lines Are Parallel
+Given two lines, determine whether or not they are parallel.
+
+Lines are represented by a list [a, b, c], which corresponds to the line ax+by=c.
+
+Examples
+lines_are_parallel([1, 2, 3], [1, 2, 4]) ➞ true
+# x+2y=3 and x+2y=4 are parallel.
+
+lines_are_parallel([2, 4, 1], [4, 2, 1]) ➞ false
+# 2x+4y=1 and 4x+2y=1 are not parallel.
+
+lines_are_parallel([0, 1, 5], [0, 1, 5]) ➞ true
+# Lines are parallel to themselves.
+Notes
+All the test cases use valid input (so no lists of the wrong size, for example).
+All the coefficients will be integers (whole numbers).
+
 ---
