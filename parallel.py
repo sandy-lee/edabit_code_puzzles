@@ -10,69 +10,46 @@ __license__ = "MIT"
 import sys
 
 
+def get_value(value_name):
+    """Get values and validate"""
+    while True:
+        try:
+            value = int(input(f'Enter {value_name}:'))
+        except ValueError as error:
+            print(f'{error} \nInteger Values Only')
+        else:
+            return value
+
+
 def parallel(line_one, line_two):
-    if len(line_one) != 3:
-        sys.exit("Error, wrong size list supplied for first line")
-    elif len(line_two) != 3:
-        sys.exit("Error, wrong size list supplied for second line")
-    else:
-        for element in line_one:
-            if type(element) != int:
-                sys.exit("Non-integer supplied for first line")
-        for element in line_two:
-            if type(element) != int:
-                sys.exit("Non-integer supplied for second line")
+    """Assess whether lines are parallel"""
     if line_one[:2] == line_two[:2]:
         print("Lines are parallel")
     else:
         print("Line are not parallel")
-    return
 
 
 def main():
     """ Main entry point of the app """
-    line_one, line_two = [0, 0, 0], [0, 0, 0]
     while True:
-        try:
-            line_one[0] = int(input('Enter line one coefficient a:'))
-        except:
-            ValueError
-            print("int only")
-        try:
-            line_one[1] = int(input('Enter line one coefficient b:'))
-        except:
-            ValueError
-            print("int only")
-        try:
-            line_one[2] = int(input('Enter line one coefficient c:'))
-        except:
-            ValueError
-            print("int only")
-        try:
-            line_two[0] = int(input('Enter line two coefficient a:'))
-        except:
-            ValueError
-            print("int only")
-        try:
-            line_two[1] = int(input('Enter line two coefficient b:'))
-        except:
-            ValueError
-            print("int only")
-        try:
-            line_two[2] = int(input('Enter line two coefficient c:'))
-        except:
-            ValueError
-            print("int only")
-
-    # TODO: look into error handling for data validation
-
-
-    # parallel(line_one, line_two)
-    # print(line_one[1:3])
-    # print(line_two[1:3])
-
+        line_one, line_two = [0, 0, 0], [0, 0, 0]
+        line_one[0] = get_value('line one coefficient a')
+        line_one[1] = get_value('line one coefficient b')
+        line_one[2] = get_value('line one coefficient c')
+        line_two[0] = get_value('line two coefficient a')
+        line_two[1] = get_value('line two coefficient b')
+        line_two[2] = get_value('line two coefficient c')
+        parallel(line_one, line_two)
+        while True:
+            more = input('Again? y/n')
+            if more in ('y', 'n'):
+                break
+            print('Invalid Input')
+            continue
+        if more == 'y':
+            continue
+        sys.exit('Goodbye')
 
 
 if __name__ == "__main__":
-    """ This is executed when run from the command line """
     main()
