@@ -19,6 +19,8 @@ def encrypt(message=None):
 def main():
     text = encrypt("test")
     print(list(text))
+
+    # TODO: how to make it print out a reverse list as a sting from a generator
     # while True:
     #     text = input('Enter word to encrypt:')
     #     print(list(encrypt(text)))
