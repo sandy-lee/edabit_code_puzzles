@@ -32,6 +32,10 @@ def encrypt(message=None):
     return response.join(append_step)
 
 
+def encrypt_2(word):
+    return word[::-1].translate(str.maketrans('aeou', '0123')) + 'aca'
+
+
 def main():
     """
     lorum ipsum
@@ -48,6 +52,8 @@ def main():
         if again == 'y':
             continue
         sys.exit('Goodbye')
+
+
 
 
 if __name__ == "__main__":
