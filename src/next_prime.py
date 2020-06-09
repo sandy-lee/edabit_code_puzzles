@@ -17,12 +17,17 @@ __author__ = "Sandy Lee"
 __version__ = "0.1.0"
 __license__ = "MIT"
 
-import sys
+
+# def next_prime(number):
+#     if (number % number == 0) and (number / 1 == number):
+#         return(number)
+
+import sympy
 
 
 def main():
     """ Main entry point of the app """
-    pass
+    print(sympy.isprime(11))
 
 
 if __name__ == "__main__":
