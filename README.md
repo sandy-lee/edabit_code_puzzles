@@ -1,6 +1,6 @@
-#edabit_code_puzzles
+# edabit_code_puzzles
 
-##FizzBuzz
+## FizzBuzz
 
 Create a function that takes a number as an argument and returns "Fizz", "Buzz" or "FizzBuzz".
 
@@ -23,7 +23,7 @@ If you get stuck on a challenge, find help in the Resources tab.
 If you're really stuck, unlock solutions in the Solutions tab.
 
 ___
-##Fibonacci Sequence
+## Fibonacci Sequence
 The Fibonacci Sequence is the sequence of numbers (Fibonacci Numbers) whose sum is the two preceding numbers (e.g. 0, 1, 1, 2, 3, etc). Using 0 and 1 as the starting values, create a function that returns a list containing all of the Fibonacci numbers less than 255.
 
 Examples
@@ -59,7 +59,7 @@ All the coefficients will be integers (whole numbers).
 
 ---
 
-#Two Distinct Elements
+## Two Distinct Elements
 In each input list, every number repeats at least once, except for two.
 
 Write a function that returns the two unique numbers.
@@ -91,7 +91,7 @@ e => 1
 o => 2
 u => 3
 
-# "1lpp0"
+## "1lpp0"
 Step 3: Add "aca" to the end of the word: "1lpp0aca"
 
 Output: "1lpp0aca"
@@ -110,7 +110,7 @@ Notes
 All inputs are strings, no uppercases and all output must be strings.
 
 ---
-#Combined Consecutive Sequence
+## Combined Consecutive Sequence
 
 Write a function that returns True if two lists, when combined, form a consecutive sequence.
 
@@ -130,7 +130,7 @@ The input lists can be in any order.
 A consecutive sequence is a sequence without any gaps in the integers, e.g. 1, 2, 3, 4, 5 is a consecutive sequence, but 1, 2, 4, 5 is not.
 
 ---
-#Next Prime
+## Next Prime
 Published by Helen Yu in Python
 mathnumbers
 Given an integer, create a function that returns the next prime. If the number is prime, return the number itself.
@@ -142,4 +142,4 @@ next_prime(12) ➞ 13
 next_prime(24) ➞ 29
 
 next_prime(11) ➞ 11
-# 11 is a prime, so we return the number itself.
+(11 is a prime, so we return the number itself.)
