@@ -134,3 +134,6 @@ dmypy.json
 # VS Code files
 /edabit_code_puzzles.code-workspace
 .vscode/
+
+# Mac directory folder files
+/.DS_Store
