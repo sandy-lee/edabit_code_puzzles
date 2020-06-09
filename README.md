@@ -128,3 +128,18 @@ Notes
 The input lists will have unique values.
 The input lists can be in any order.
 A consecutive sequence is a sequence without any gaps in the integers, e.g. 1, 2, 3, 4, 5 is a consecutive sequence, but 1, 2, 4, 5 is not.
+
+---
+#Next Prime
+Published by Helen Yu in Python
+mathnumbers
+Given an integer, create a function that returns the next prime. If the number is prime, return the number itself.
+
+Examples
+
+next_prime(12) ➞ 13
+
+next_prime(24) ➞ 29
+
+next_prime(11) ➞ 11
+# 11 is a prime, so we return the number itself.
