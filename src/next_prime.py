@@ -20,6 +20,14 @@ __author__ = "Sandy Lee"
 __version__ = "0.1.0"
 __license__ = "MIT"
 
+"""
+Solution:
+
+def next_prime(num):
+    while [i for i in range(2, num) if num%i==0]:
+        num+=1
+    return num
+"""
 
 def is_prime(n):
     divisor = 2
@@ -51,10 +59,10 @@ def main():
 
 
 """
-TODO: optimise isprime(n) as per:
+TODO: optimise is_prime(n) as per:
 https://en.wikipedia.org/wiki/Primality_test
-TODO: add interface to accept any prime
-TODO: error checking for 0, 1 or negative values into isprime(n)
+TODO: add interface to accept any number
+TODO: error checking for 0, 1 or negative values into is_prime(n)
 """
 
 
