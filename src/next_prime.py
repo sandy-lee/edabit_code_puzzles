@@ -33,12 +33,21 @@ def is_prime(n):
 
 
 def next_prime(n):
-    pass
+    next_prime = False
+    if is_prime(n):
+        return(n)
+    else:
+        while next_prime is False:
+            next_prime = is_prime(n)
+            n += 1
+    return(n-1)
 
 
 def main():
     """ Main entry point of the app """
-    print(is_prime(10))
+    print(next_prime(12))
+    print(next_prime(24))
+    print(next_prime(11))
 
 
 """
