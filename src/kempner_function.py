@@ -9,10 +9,13 @@ __license__ = "MIT"
 
 
 def factorial(n):
-    number = 0
-    for i, n in enumerate(n):
-        number = i*n
-    return number
+    if n == 1:
+        return n
+    elif n < 1:
+        return ("NA")
+    else:
+        return n*factorial(n-1)
+
 
 
 
@@ -27,7 +30,7 @@ def kempner(n):
 
 
 def main():
-  factorial(5)
+  print(factorial(5))
 
 
 if __name__ == "__main__":
