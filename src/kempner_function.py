@@ -11,26 +11,27 @@ __license__ = "MIT"
 def factorial(n):
     if n == 1:
         return n
-    elif n < 1:
-        return ("NA")
     else:
         return n*factorial(n-1)
 
 
-
-
 def kempner(n):
-  if (n > 0):
-    result = n + kempner(n - 1)
-    print(n)
-  else:
-    result = 0
-  return result
-  
+    if factorial(n) / n == 0:
+        return n
+    else:
+        return kempner(n-1)
+
+
+# def kempner(n):
+#     divisor = n
+#     if factorial(n) / divisor == 0:
+#         return ("it works!!")
+#     else:
+#         return("it sucks")
 
 
 def main():
-  print(factorial(5))
+    print(kempner(6))
 
 
 if __name__ == "__main__":
