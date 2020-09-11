@@ -7,8 +7,9 @@ __author__ = "Sandy Lee"
 __version__ = "0.1.0"
 __license__ = "MIT"
 
-import math 
+import math
 
+divisor = 0
 # def factorial(n):
 #     if n == 1:
 #         return n
@@ -17,17 +18,27 @@ import math
 
 
 def kempner(n):
-    if math.factorial(n) / n == 0:
-        print(math.factorial(n))
-        print(n)
+    global divisor
+    if math.factorial(n) / divisor == 0:
         return n
-    else:
+    elif math.factorial(n) / divisor > 0:
         return kempner(n-1)
 
 
 def main():
-    print(kempner(4))
+    global divisor
+    number_to_check = 6
+    divisor = 6
+    print(kempner(number_to_check))
 
 
 if __name__ == "__main__":
     main()
+
+"""
+TODO:
+[] step through variable in debug mode to make sure global variable is working
+[] fix non-recusive way of doing factorials
+[] put in place very basic ui and input validation
+
+
