@@ -23,12 +23,20 @@ divisor = 0
 #     return result
 
 
+# def kempner(n):
+#     global divisor
+#     if math.factorial(n) % divisor == 0:
+#         return n
+#     elif math.factorial(n) % divisor > 0:
+#         return kempner(n-1)
+
 def kempner(n):
-    global divisor
-    if math.factorial(n) % divisor == 0:
-        return n
-    elif math.factorial(n) % divisor > 0:
-        return kempner(n-1)
+    for i in range(1, n):
+        if math.factorial(n) % divisor == 0:
+            return i
+        elif math.factorial(n) % divisor > 0:
+            return kempner(n-1)
+
 
 
 def main():
