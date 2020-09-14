@@ -16,12 +16,18 @@ divisor = 0
 #     else:
 #         return n*factorial(n-1)
 
+# def iterative_factorial(n):
+#     result = 1
+#     for i in range(2,n+1):
+#         result *= i
+#     return result
+
 
 def kempner(n):
     global divisor
-    if math.factorial(n) / divisor == 0:
+    if math.factorial(n) % divisor == 0:
         return n
-    elif math.factorial(n) / divisor > 0:
+    elif math.factorial(n) % divisor > 0:
         return kempner(n-1)
 
 
@@ -40,5 +46,6 @@ TODO:
 [] step through variable in debug mode to make sure global variable is working
 [] fix non-recusive way of doing factorials
 [] put in place very basic ui and input validation
+"""
 
 
